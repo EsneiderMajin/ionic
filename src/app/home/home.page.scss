@@ -1,0 +1,12 @@
+.task-item {
+    --border-radius: 10px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --padding: 16px;
+    --margin: 8px 0;
+  }
+  
+  .task-done {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
