@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title>
-      Tasks
+      Tareas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +16,7 @@
           </ion-avatar>
           <ion-label>
             <h2>{{ task.title }}</h2>
-            <p>{{ task.status === 'done' ? 'Completed' : 'Pending' }}</p>
+            <p>{{ task.status === 'done' ? 'Completado' : 'Pendiente' }}</p>
           </ion-label>
         </ion-item>
 
@@ -37,18 +37,18 @@
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <ion-button (click)="cancel()">Cancel</ion-button>
+            <ion-button (click)="cancel()">Cancelar</ion-button>
           </ion-buttons>
-          <ion-title>New Task</ion-title>
+          <ion-title>Nueva Tarea</ion-title>
           <ion-buttons slot="end">
-            <ion-button (click)="addItem()" strong>Add</ion-button>
+            <ion-button (click)="addItem()" strong>Añadir</ion-button>
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
         <ion-item>
-          <ion-label position="floating">Task Name</ion-label>
-          <ion-input type="text" [(ngModel)]="name" placeholder="Enter task name"></ion-input>
+          <ion-label position="floating">Nombre Tarea</ion-label>
+          <ion-input type="text" [(ngModel)]="name" placeholder=""></ion-input>
         </ion-item>
       </ion-content>
     </ng-template>

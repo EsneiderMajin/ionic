@@ -67,7 +67,7 @@ export class HomePage {
       }).then( () => {
         this.name = '';
         this.modal.dismiss(this.name, 'confirm');
-        toast.success('Task added successfully');
+        toast.success('Tarea añadida correctamente');
       })
       .catch( (error) => {
         alert("Error");
@@ -86,7 +86,7 @@ export class HomePage {
       }).then(() => {
         this.name = ''; 
         this.modal.dismiss();
-        toast.success('Task added successfully');
+        toast.success('Tarea añadida correctamente');
       }).catch((error) => {
         console.error('Error adding task:', error);
         toast.error('Error adding task');
@@ -115,9 +115,7 @@ export class HomePage {
       alert("Error");
       console.log(error);
     })
-
     setTimeout( () => { slidingItem.close() }, 2);
-
   }
 
   getTaskFromFirebase() {
@@ -137,7 +135,7 @@ export class HomePage {
   async removeTask(slidingItem: IonItemSliding, task: Task) {
     const alert = await this.alertController.create({
       header: 'Remove task',
-      message: 'Are you sure you want to remove this task?',
+      message: 'Quieres eliminar esta Tarea?',
       buttons: [
         {
           text: 'Cancel',
@@ -146,7 +144,7 @@ export class HomePage {
           text: 'remove it!',
           handler: () => {
             remove(ref(this.db, 'tasks/' + task.id)).then( () => {
-              toast.success('Task removed successfully');
+              toast.success('Tarea eliminada correctamente');
             })
             .catch( (error) => {
               toast.error('Error removing task');
